@@ -85,9 +85,8 @@ CREATE TABLE OrderLine (
 -- To create the Pizza table with the columns, primary key and table engine.
 CREATE TABLE Pizza (
     id TINYINT UNSIGNED AUTO_INCREMENT,
-    name VARCHAR(20) UNIQUE NOT NULL,
-    size CHAR(1) NOT NULL,
-    base_price_ttc DECIMAL(3, 2) NOT NULL, 
+    name VARCHAR(20) NOT NULL,
+    size CHAR(1) NOT NULL, 
     PRIMARY KEY(id))
     ENGINE = INNODB;
 

@@ -4,51 +4,51 @@
 
 
 -- Creating the oc_pizza database after droping the previous one if exists.
-DROP DATABASE IF EXISTS oc_pizza; CREATE DATABASE oc_pizza CHARACTER SET 'utf8';
+-- DROP DATABASE IF EXISTS oc_pizza; CREATE DATABASE oc_pizza CHARACTER SET 'utf8';
 -- Granting all privileges of that database to my username.
-GRANT ALL PRIVILEGES ON oc_pizza.* TO 'jfsubrini'@'localhost' IDENTIFIED BY 'jeremiehugo1';
+-- GRANT ALL PRIVILEGES ON oc_pizza.* TO 'jfsubrini'@'localhost' IDENTIFIED BY 'jeremiehugo1';
 
 -- Use the oc_pizza database.
 USE oc_pizza;
 
 -- Some values for the Buyer table.
-INSERT INTO Buyer
-    VALUES (NULL, 'Patrick', 'Dupont', 'H', '123z45zrs67', 0678936741),
-           (NULL, 'Jérémie', 'Martin', 'H', 'sffs1m567zer', 0673216709),
-           (NULL, 'Joseph', 'Durant', 'H', 'tdd123zeaze', 0612376436),
-           (NULL, 'Stéphanie', 'Amelon', 'F', '1er234qsdqsd', 0656879899),
-           (NULL, 'Gisèle', 'Goule', 'F', 'ii12rgdv7', 0613212114),
-           (NULL, 'Jeanne', 'Igoine', 'F', '12fddg3fdgdfg', 0671555678),
-           (NULL, 'Antoine', 'Meunier', 'H', 'pp2fddg3fdgdfg', 0679955678),
-		   (NULL, 'Benoît', 'Leclerc', 'H', 'dsfkl2345sfsdf', 0679564328),
-		   (NULL, 'Geneviève', 'Lemarais', 'F', 'sdf442s345sfsdf', 0696432003),
-		   (NULL, 'Monique', 'Legendre', 'F', 'dsg42qsdfdf2s34', 0664305123),
-		   (NULL, 'Sonia', 'Bisette', 'F', '442dfsdf42qfdf2', 0643511213),
-		   (NULL, 'André', 'Sainz', 'M', 'zrtfsdfsd2d44', 0635122879),
-		   (NULL, 'Fabrice', 'Santori', 'M', '4sdfgztss27gg', 0651252789),
-		   (NULL, 'Monique', 'Soulier', 'F', 'fgsfg456gzt67', 0625285898),
-		   (NULL, 'Julie', 'Joubert', 'F', 'fdgdfg654564sfg46', 0658589878);
+INSERT INTO Buyer (id, first_name, last_name, gender, password, phone_number)
+    VALUES (1, 'Patrick', 'Dupont', 'H', '123z45zrs67', 0678936741),
+           (2, 'Jérémie', 'Martin', 'H', 'sffs1m567zer', 0673216709),
+           (3, 'Joseph', 'Durant', 'H', 'tdd123zeaze', 0612376436),
+           (4, 'Stéphanie', 'Amelon', 'F', '1er234qsdqsd', 0656879899),
+           (5, 'Gisèle', 'Goule', 'F', 'ii12rgdv789', 0613212114),
+           (6, 'Jeanne', 'Igoine', 'F', '12fddg3fdgdfg', 0671555678),
+           (7, 'Antoine', 'Meunier', 'H', 'pp2fddg3fdgdfg', 0679955678),
+		       (8, 'Benoît', 'Leclerc', 'H', 'dsfkl2345sfsdf', 0679564328),
+		       (9, 'Geneviève', 'Lemarais', 'F', 'sdf442s345sfsdf', 0696432003),
+		       (10, 'Monique', 'Legendre', 'F', 'dsg42qsdfdf2s34', 0664305123),
+		       (11, 'Sonia', 'Bisette', 'F', '442dfsdf42qfdf2', 0643511213),
+		       (12, 'André', 'Sainz', 'M', 'zrtfsdfsd2d44', 0635122879),
+		       (13, 'Fabrice', 'Santori', 'M', '4sdfgztss27gg', 0651252789),
+		       (14, 'Monique', 'Soulier', 'F', 'fgsfg456gzt67', 0625285898),
+		       (15, 'Julie', 'Joubert', 'F', 'fdgdfg654564s', 0658589878);
 
 -- Some values for the OCPizzaUser table.
-INSERT INTO OCPizzaUser
-    VALUES (NULL, 1, 'patoche1', 'Réceptionniste'),
-           (NULL, 1, 'minouche1', 'Réceptionniste'),
-           (NULL, 1, 'jojo1', 'Manager'),
-           (NULL, 2, 'ninive2', 'Réceptionniste'),
-           (NULL, 2, 'gigoule2', 'Réceptionniste'),
-           (NULL, 2, 'jigoine2', 'Manager'),
-           (NULL, 3, 'nono3', 'Réceptionniste'),
-           (NULL, 3, 'bibine3', 'Réceptionniste'),
-           (NULL, 3, 'ginette3', 'Manager'),
-           (NULL, 4, 'mounette4', 'Réceptionniste'),
-           (NULL, 4, 'soubise4', 'Réceptionniste'),
-           (NULL, 4, 'andre4', 'Manager'),
-           (NULL, 5, 'fabrice5', 'Réceptionniste'),
-           (NULL, 5, 'monique5', 'Réceptionniste'),
-           (NULL, 5, 'jjoubert5', 'Manager');
+INSERT INTO OCPizzaUser (buyer_id, pizzeria_id, username, role)
+    VALUES (1, 1, 'patoche1', 'Réceptionniste'),
+           (2, 1, 'minouche1', 'Réceptionniste'),
+           (3, 1, 'jojo1', 'Manager'),
+           (4, 2, 'ninive2', 'Réceptionniste'),
+           (5, 2, 'gigoule2', 'Réceptionniste'),
+           (6, 2, 'jigoine2', 'Manager'),
+           (7, 3, 'nono3', 'Réceptionniste'),
+           (8, 3, 'bibine3', 'Réceptionniste'),
+           (9, 3, 'ginette3', 'Manager'),
+           (10, 4, 'mounette4', 'Réceptionniste'),
+           (11, 4, 'soubise4', 'Réceptionniste'),
+           (12, 4, 'andre4', 'Manager'),
+           (13, 5, 'fabrice5', 'Réceptionniste'),
+           (14, 5, 'monique5', 'Réceptionniste'),
+           (15, 5, 'jjoubert5', 'Manager');
 
 -- Some values for the Pizzeria table.
-INSERT INTO Pizzeria
+INSERT INTO Pizzeria (id, name, address)
     VALUES (1, 'Victoire', '44.8307086,-0.5720470999999999'),
            (2, 'Chartron', '44.8570336,-0.5656962'),
            (3, 'Saint Pierre', '44.8400225,-0.5707422999999999'),
@@ -56,7 +56,7 @@ INSERT INTO Pizzeria
            (5, 'Gare', '44.8281687,-0.5582281000000001');
 
 -- Some values for the Pizza table.
-INSERT INTO Pizza
+INSERT INTO Pizza (id, name, size)
     VALUES (1, 'Marguerite', 's'),
            (2, 'Reine', 's'),
            (3, 'Quatre Saisons', 's'),
@@ -64,12 +64,12 @@ INSERT INTO Pizza
            (5, 'Marguerite', 'f'),
            (6, 'Reine', 'f'),
            (7, 'Quatre Saisons', 'f'),
-           (8, 'Carnivore', 'f'),
+           (8, 'Carnivore', 'f');
 
 -- Some values for the Ingredient table.
-INSERT INTO Ingredient
+INSERT INTO Ingredient (id, name, price_ttc)
     VALUES (1, 'Pâte', 2.40),
-    	   (2, 'Sauce tomate', 1.00),
+    	     (2, 'Sauce tomate', 1.00),
            (3, 'Mozzarella', 2.00),
            (4, 'Emmental', 2.00),
            (5, 'Jambon', 2.00),
@@ -80,7 +80,7 @@ INSERT INTO Ingredient
            (10, 'Poivron', 1.00);
 
 -- Some values for the Pizza_Ingredient table.
-INSERT INTO Pizza_Ingredient
+INSERT INTO Pizza_Ingredient (pizza_id, ingredient_id, dosis)
     VALUES (1, 1, 1), (1, 2, 1), (1, 3, 1), (1, 4, 1),
            (2, 1, 1), (2, 2, 1), (2, 3, 1), (2, 5, 1), (2, 8, 1),
            (3, 1, 1), (3, 2, 1), (3, 3, 1), (3, 8, 1), (3, 9, 1), (3, 10, 1),
@@ -91,7 +91,7 @@ INSERT INTO Pizza_Ingredient
            (8, 1, 2), (8, 2, 2), (8, 3, 2), (8, 5, 2), (8, 6, 2), (8, 7, 2);
 
 -- Some values for the Stock table.
-INSERT INTO Stock
+INSERT INTO Stock (pizzeria_id, ingredient_id, quantity_dosis, date_time)
     VALUES (1, 1, 300, '2018-02-01 10:05:08'), (1, 2, 250, '2018-02-01 10:05:13'),
            (1, 3, 100, '2018-02-01 10:05:24'), (1, 4, 220, '2018-02-01 10:05:34'),
            (1, 5, 120, '2018-02-01 10:05:44'), (1, 6, 140, '2018-02-01 10:05:54'),
