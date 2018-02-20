@@ -67,11 +67,10 @@ CREATE TABLE OrderPizza (
     date_order DATE NOT NULL,
     hour_order TIME NOT NULL,
     state ENUM('Waiting List', 'Being Prepared', 'Prepared', 'On Delivery', 'Delivery') NOT NULL,
-    total_price_ttc DECIMAL(5, 2) NOT NULL,
-    payment_mode CHAR(1) NOT NULL,
+    payment_mode ENUM('Paid online', 'Cash on delivery', 'Credit card pizzeria', 'Cash pizzeria') NOT NULL,
     invoice_address MEDIUMINT UNSIGNED NOT NULL,
     delivery_address MEDIUMINT UNSIGNED NOT NULL,
-    delivery_or_not CHAR(1) NOT NULL,
+    delivery_or_not BOOLEAN NOT NULL,
     PRIMARY KEY(num))
     ENGINE = INNODB;
 
@@ -86,7 +85,7 @@ CREATE TABLE OrderLine (
 CREATE TABLE Pizza (
     id TINYINT UNSIGNED AUTO_INCREMENT,
     name VARCHAR(20) NOT NULL,
-    size CHAR(1) NOT NULL, 
+    size TINYINT NOT NULL, 
     PRIMARY KEY(id))
     ENGINE = INNODB;
 

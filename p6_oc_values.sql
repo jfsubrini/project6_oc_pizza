@@ -29,6 +29,14 @@ INSERT INTO Buyer (id, first_name, last_name, gender, password, phone_number)
 		       (14, 'Monique', 'Soulier', 'F', 'fgsfg456gzt67', 0625285898),
 		       (15, 'Julie', 'Joubert', 'F', 'fdgdfg654564s', 0658589878);
 
+-- Some values for the Pizzeria table.
+INSERT INTO Pizzeria (id, name, address)
+    VALUES (1, 'Victoire', '44.8307086,-0.5720470999999999'),
+           (2, 'Chartron', '44.8570336,-0.5656962'),
+           (3, 'Saint Pierre', '44.8400225,-0.5707422999999999'),
+           (4, 'Meriadeck', '44.8356851,-0.5840582999999999'),
+           (5, 'Gare', '44.8281687,-0.5582281000000001');
+
 -- Some values for the OCPizzaUser table.
 INSERT INTO OCPizzaUser (buyer_id, pizzeria_id, username, role)
     VALUES (1, 1, 'patoche1', 'Réceptionniste'),
@@ -47,24 +55,16 @@ INSERT INTO OCPizzaUser (buyer_id, pizzeria_id, username, role)
            (14, 5, 'monique5', 'Réceptionniste'),
            (15, 5, 'jjoubert5', 'Manager');
 
--- Some values for the Pizzeria table.
-INSERT INTO Pizzeria (id, name, address)
-    VALUES (1, 'Victoire', '44.8307086,-0.5720470999999999'),
-           (2, 'Chartron', '44.8570336,-0.5656962'),
-           (3, 'Saint Pierre', '44.8400225,-0.5707422999999999'),
-           (4, 'Meriadeck', '44.8356851,-0.5840582999999999'),
-           (5, 'Gare', '44.8281687,-0.5582281000000001');
-
 -- Some values for the Pizza table.
 INSERT INTO Pizza (id, name, size)
-    VALUES (1, 'Marguerite', 's'),
-           (2, 'Reine', 's'),
-           (3, 'Quatre Saisons', 's'),
-           (4, 'Carnivore', 's'),
-           (5, 'Marguerite', 'f'),
-           (6, 'Reine', 'f'),
-           (7, 'Quatre Saisons', 'f'),
-           (8, 'Carnivore', 'f');
+    VALUES (1, 'Marguerite', 1),
+           (2, 'Reine', 1),
+           (3, 'Quatre Saisons', 1),
+           (4, 'Carnivore', 1),
+           (5, 'Marguerite', 2),
+           (6, 'Reine', 2),
+           (7, 'Quatre Saisons', 2),
+           (8, 'Carnivore', 2);
 
 -- Some values for the Ingredient table.
 INSERT INTO Ingredient (id, name, price_ttc)
