@@ -108,8 +108,7 @@ CREATE TABLE Pizza_Ingredient (
 CREATE TABLE Stock (
     pizzeria_id TINYINT UNSIGNED NOT NULL,
     ingredient_id TINYINT UNSIGNED NOT NULL,
-    quantity_dosis MEDIUMINT UNSIGNED,
-    date_time DATETIME NOT NULL)
+    quantity_dosis MEDIUMINT UNSIGNED)
     ENGINE = INNODB;
 
 -- To create the Foreign Key in the WebCustomer table.
