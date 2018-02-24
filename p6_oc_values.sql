@@ -1,43 +1,43 @@
--- OC PIZZA Database : DEMO VALUES
+-- OC PIZZA Database : OC DEMO VALUES - Some data from OC Pizza Managers.
 
--- Copyright Jean-François Subrini, student DA Python at OpenClassrooms, 10/02/2018.
+-- Copyright Jean-François Subrini, student DA Python at OpenClassrooms, 22/02/2018.
 
 
--- Creating the oc_pizza database after droping the previous one if exists.
--- DROP DATABASE IF EXISTS oc_pizza; CREATE DATABASE oc_pizza CHARACTER SET 'utf8';
--- Granting all privileges of that database to my username.
--- GRANT ALL PRIVILEGES ON oc_pizza.* TO 'jfsubrini'@'localhost' IDENTIFIED BY 'jeremiehugo1';
-
--- Use the oc_pizza database.
-USE oc_pizza;
-
--- Some values for the Buyer table.
+-- Values for the Buyer table : OC PIZZA employees and managers.
 INSERT INTO Buyer (id, first_name, last_name, gender, password, phone_number)
-    VALUES (1, 'Patrick', 'Dupont', 'H', '123z45zrs67', 0678936741),
-           (2, 'Jérémie', 'Martin', 'H', 'sffs1m567zer', 0673216709),
-           (3, 'Joseph', 'Durant', 'H', 'tdd123zeaze', 0612376436),
-           (4, 'Stéphanie', 'Amelon', 'F', '1er234qsdqsd', 0656879899),
-           (5, 'Gisèle', 'Goule', 'F', 'ii12rgdv789', 0613212114),
-           (6, 'Jeanne', 'Igoine', 'F', '12fddg3fdgdfg', 0671555678),
-           (7, 'Antoine', 'Meunier', 'H', 'pp2fddg3fdgdfg', 0679955678),
-		       (8, 'Benoît', 'Leclerc', 'H', 'dsfkl2345sfsdf', 0679564328),
-		       (9, 'Geneviève', 'Lemarais', 'F', 'sdf442s345sfsdf', 0696432003),
-		       (10, 'Monique', 'Legendre', 'F', 'dsg42qsdfdf2s34', 0664305123),
-		       (11, 'Sonia', 'Bisette', 'F', '442dfsdf42qfdf2', 0643511213),
-		       (12, 'André', 'Sainz', 'M', 'zrtfsdfsd2d44', 0635122879),
-		       (13, 'Fabrice', 'Santori', 'M', '4sdfgztss27gg', 0651252789),
-		       (14, 'Monique', 'Soulier', 'F', 'fgsfg456gzt67', 0625285898),
-		       (15, 'Julie', 'Joubert', 'F', 'fdgdfg654564s', 0658589878);
+    VALUES (1, 'Patrick', 'Dupont', 'H', 'wWddZUFwHkAMzcn4', 0678936741),
+           (2, 'Jérémie', 'Martin', 'H', 'Czy8k2JAwQYCnubZ', 0673216709),
+           (3, 'Joseph', 'Durant', 'H', 'agfGj3GHKUDzUc3D', 0612376436),
+           (4, 'Stéphanie', 'Amelon', 'F', 'GUtLkC4SQmA6VMp2', 0656879899),
+           (5, 'Gisèle', 'Goule', 'F', 'pef2bYDxfkxbCCcc', 0613212114),
+           (6, 'Jeanne', 'Igoine', 'F', '2vYE3rHbM5HRjMnz', 0671555678),
+           (7, 'Antoine', 'Meunier', 'H', 's7EKbHLaJZDBzfLs', 0679955678),
+		       (8, 'Benoît', 'Leclerc', 'H', 'MGDVqQKcXrqjGQH7', 0679564328),
+		       (9, 'Geneviève', 'Lemarais', 'F', '5rAfjJX2mppMePkp', 0696432003),
+		       (10, 'Monique', 'Legendre', 'F', 'VxLZGYKWZvYD6QZm', 0664305123),
+		       (11, 'Sonia', 'Bisette', 'F', 'ceMnkWE5bfRU3HYk', 0643511213),
+		       (12, 'André', 'Sainz', 'M', 'aKWY8ZfChvaqmnzS', 0635122879),
+		       (13, 'Fabrice', 'Santori', 'M', 'trBngdMVs7APXvB5', 0651252789),
+		       (14, 'Monique', 'Soulier', 'F', 'tmN5AR5Pxv69Sh4c', 0625285898),
+		       (15, 'Julie', 'Joubert', 'F', 'FjxvqWYT4mcevqB7', 0658589878);
 
--- Some values for the Pizzeria table.
-INSERT INTO Pizzeria (id, name, address)
-    VALUES (1, 'Victoire', '44.8307086,-0.5720470999999999'),
-           (2, 'Chartron', '44.8570336,-0.5656962'),
-           (3, 'Saint Pierre', '44.8400225,-0.5707422999999999'),
-           (4, 'Meriadeck', '44.8356851,-0.5840582999999999'),
-           (5, 'Gare', '44.8281687,-0.5582281000000001');
+-- Values for the Address table : the address of each pizzeria.
+INSERT INTO Address (id, street_1, street_2, city, zip_code, comment, type, webcustomer_id)
+    VALUES (1, "5 rue Elie Gintrec", NULL, 'Bordeaux', '33000', NULL, 4, NULL),--attention webcustomer null
+           (2, "130 cours du Médoc", NULL, 'Bordeaux', '33000', NULL, 4, NULL),
+           (3, "13 place Saint-Pierre", NULL, 'Bordeaux', '33000', NULL, 4, NULL),
+           (4, "34 cours Maréchal Juin", NULL, 'Bordeaux', '33000', NULL, 4, NULL),
+           (5, "240 cours de la Marne", NULL, 'Bordeaux', '33000', NULL, 4, NULL);
 
--- Some values for the OCPizzaUser table.
+-- Values for the Pizzeria table : name and address for each pizzeria.
+INSERT INTO Pizzeria (id, name, address_id)
+    VALUES (1, 'Victoire', 1),
+           (2, 'Chartron', 2),
+           (3, 'Saint-Pierre', 3),
+           (4, 'Mériadeck', 4),
+           (5, 'Gare Saint-Jean', 5);
+
+-- Values for the OCPizzaUser table : other information for all the OC Pizza's employees and managers. 
 INSERT INTO OCPizzaUser (buyer_id, pizzeria_id, username, role)
     VALUES (1, 1, 'patoche1', 'Réceptionniste'),
            (2, 1, 'minouche1', 'Réceptionniste'),
@@ -55,7 +55,7 @@ INSERT INTO OCPizzaUser (buyer_id, pizzeria_id, username, role)
            (14, 5, 'monique5', 'Réceptionniste'),
            (15, 5, 'jjoubert5', 'Manager');
 
--- Some values for the Pizza table.
+-- Values for the Pizza table : all the pizzas in the menu, standard (1) and family (2) sizes.
 INSERT INTO Pizza (id, name, size)
     VALUES (1, 'Marguerite', 1),
            (2, 'Reine', 1),
@@ -66,7 +66,7 @@ INSERT INTO Pizza (id, name, size)
            (7, 'Quatre Saisons', 2),
            (8, 'Carnivore', 2);
 
--- Some values for the Ingredient table.
+-- Values for the Ingredient table : all the ingredients with the price for each.
 INSERT INTO Ingredient (id, name, price_ttc)
     VALUES (1, 'Pâte', 2.40),
     	     (2, 'Sauce tomate', 1.00),
@@ -79,7 +79,7 @@ INSERT INTO Ingredient (id, name, price_ttc)
            (9, 'Oignon', 1.00),
            (10, 'Poivron', 1.00);
 
--- Some values for the Pizza_Ingredient table.
+-- Values for the Pizza_Ingredient table : recipe of each pizza in the menu.
 INSERT INTO Pizza_Ingredient (pizza_id, ingredient_id, dosis)
     VALUES (1, 1, 1), (1, 2, 1), (1, 3, 1), (1, 4, 1),
            (2, 1, 1), (2, 2, 1), (2, 3, 1), (2, 5, 1), (2, 8, 1),
@@ -90,7 +90,7 @@ INSERT INTO Pizza_Ingredient (pizza_id, ingredient_id, dosis)
            (7, 1, 2), (7, 2, 2), (7, 3, 2), (7, 8, 2), (7, 9, 2), (7, 10, 2),
            (8, 1, 2), (8, 2, 2), (8, 3, 2), (8, 5, 2), (8, 6, 2), (8, 7, 2);
 
--- Some values for the Stock table.
+-- Values for the Stock table at one time : how many dosis for each ingredient in each pizzeria.
 INSERT INTO Stock (pizzeria_id, ingredient_id, quantity_dosis)
     VALUES (1, 1, 300), (1, 2, 250), (1, 3, 100), (1, 4, 220), (1, 5, 120),
            (1, 6, 140), (1, 7, 160), (1, 8, 110), (1, 9, 100), (1, 10, 300),
