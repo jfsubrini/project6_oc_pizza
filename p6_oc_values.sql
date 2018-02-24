@@ -23,7 +23,7 @@ INSERT INTO Buyer (id, first_name, last_name, gender, password, phone_number)
 
 -- Values for the Address table : the address of each pizzeria.
 INSERT INTO Address (id, street_1, street_2, city, zip_code, comment, type, webcustomer_id)
-    VALUES (1, "5 rue Elie Gintrec", NULL, 'Bordeaux', '33000', NULL, 4, NULL),--attention webcustomer null
+    VALUES (1, "5 rue Elie Gintrec", NULL, 'Bordeaux', '33000', NULL, 4, NULL),
            (2, "130 cours du Médoc", NULL, 'Bordeaux', '33000', NULL, 4, NULL),
            (3, "13 place Saint-Pierre", NULL, 'Bordeaux', '33000', NULL, 4, NULL),
            (4, "34 cours Maréchal Juin", NULL, 'Bordeaux', '33000', NULL, 4, NULL),

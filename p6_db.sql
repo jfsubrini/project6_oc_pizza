@@ -45,7 +45,7 @@ CREATE TABLE Address (
     zip_code CHAR(5) NOT NULL,
     comment VARCHAR(255),
     type TINYINT NOT NULL,
-    webcustomer_id MEDIUMINT UNSIGNED NOT NULL,
+    webcustomer_id MEDIUMINT UNSIGNED,
     PRIMARY KEY(id))
     ENGINE = INNODB;
 
@@ -53,7 +53,7 @@ CREATE TABLE Address (
 CREATE TABLE Pizzeria (
     id TINYINT UNSIGNED AUTO_INCREMENT,
     name VARCHAR(100) UNIQUE NOT NULL,
-    address_id MEDIUMINT NOT NULL,
+    address_id MEDIUMINT UNSIGNED NOT NULL,
     PRIMARY KEY(id))
     ENGINE = INNODB;
 
@@ -122,6 +122,7 @@ ALTER TABLE OCPizzaUser ADD CONSTRAINT fk_pizzeria_id
 -- To create the Foreign Keys in the Address table.
 ALTER TABLE Address ADD CONSTRAINT fk_webcustomer_id
     FOREIGN KEY (webcustomer_id) REFERENCES WebCustomer(buyer_id);
+-- To create the Foreign Key in the Pizzeria table.
 ALTER TABLE Pizzeria ADD CONSTRAINT fk_address_id
     FOREIGN KEY (address_id) REFERENCES Address(id);
 -- To create the Foreign Keys in the OrderPizza table.
@@ -143,9 +144,6 @@ ALTER TABLE Pizza_Ingredient ADD CONSTRAINT fk_pizza2_id
     FOREIGN KEY (pizza_id) REFERENCES Pizza(id);
 ALTER TABLE Pizza_Ingredient ADD CONSTRAINT fk_ingredient_id
     FOREIGN KEY (ingredient_id) REFERENCES Ingredient(id);
--- To create the Foreign Key in the Pizzeria table.
-ALTER TABLE Pizzeria ADD CONSTRAINT fk_address2_id
-    FOREIGN KEY (address_id) REFERENCES Address(id);
 -- To create the Foreign Keys in the Stock table.
 ALTER TABLE Stock ADD CONSTRAINT fk_pizzeria3_id
     FOREIGN KEY (pizzeria_id) REFERENCES Pizzeria(id);

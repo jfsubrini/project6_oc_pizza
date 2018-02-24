@@ -13,10 +13,13 @@ INSERT INTO Buyer (id, first_name, last_name, gender, password, phone_number)
            (21, 'Juliette', 'Leloy', 'F', 'GESXPkqVAeyw9bk6', 0667453876),
            (22, 'Pierre', 'Quevenec', 'H', 'DMFPpVnSatapeKv9', 0689789021),
            (23, 'Eric', 'Martin', 'H', '2ppeAqYXAbaRnMQj', 0697902543),
-           (24, 'Stéphanie', 'Louisca', 'F', 'aVNV9abHZbvgJNEF', 0617458940),
-           (25, 'Raoul', 'Gomez', 'H', 'ZxVTH6bAHavNnN8L', 0678348920),
-           (26, 'Anne', 'Retournille', 'F', 'XHn73nNpXQaJU25x', 0678790012),
-           (27, 'Pablo', 'Hierro', 'H', 'JQm9ra94TFAcrgT6', 0611346743);
+           (24, 'Nathan', 'xxx', 'H', 'xxx', 0000000000),
+           (25, 'Paul', 'xxx', 'H', 'xxx', 0000000000),
+           (26, 'Stéphanie', 'Louisca', 'F', 'aVNV9abHZbvgJNEF', 0617458940),
+           (27, 'Nathalie', 'xxx', 'F', 'xxx', 0000000000),
+           (28, 'Raoul', 'Gomez', 'H', 'ZxVTH6bAHavNnN8L', 0678348920),
+           (29, 'Anne', 'Retournille', 'F', 'XHn73nNpXQaJU25x', 0678790012),
+           (30, 'Pablo', 'Hierro', 'H', 'JQm9ra94TFAcrgT6', 0611346743);
 
 -- Some values for the WebCustomer table.
 INSERT INTO WebCustomer (buyer_id, email, birthday, job_status)
@@ -28,10 +31,13 @@ INSERT INTO WebCustomer (buyer_id, email, birthday, job_status)
            (21, 'jujuleloy@gmail.com', '1987-08-10', 'Employé.e'),
            (22, 'pierrequevenec5@gmail.com', '1970-07-23', NULL),
            (23, 'eric.martin13@yahoo.com', '1973-12-04', NULL),
-           (24, 'steph.louisca@gmail.com', '1965-10-31', 'Sans Emploi'),
-           (25, 'raoulgomez@yahoo.com', '1977-02-23', 'Employé.e'),
-           (26, 'anne.retournille@gmail.com', '1984-05-21', NULL),
-           (27, 'pablo.hierro@gmail.com', '1981-04-03', 'Employé.e');
+           (24, 'xxx', NULL, NULL),
+           (25, 'xxx', NULL, NULL),
+           (26, 'steph.louisca@gmail.com', '1965-10-31', 'Sans Emploi'),
+           (27, 'xxx', NULL, NULL),
+           (28, 'raoulgomez@yahoo.com', '1977-02-23', 'Employé.e'),
+           (29, 'anne.retournille@gmail.com', '1984-05-21', NULL),
+           (30, 'pablo.hierro@gmail.com', '1981-04-03', 'Employé.e');
 
 -- Some values for the Address table.
 INSERT INTO Address (id, street_1, street_2, city, zip_code, comment, type, webcustomer_id)
@@ -45,10 +51,10 @@ INSERT INTO Address (id, street_1, street_2, city, zip_code, comment, type, webc
            (13, "4, Rue Henri IV", NULL, 'Bordeaux', '33000', NULL, 1, 21),
            (14, "1, Rue Maubec", NULL, 'Bordeaux', '33000', "5e étage gauche", 1, 22),
            (15, "11, Rue Boudet", NULL, 'Bordeaux', '33000', NULL, 1, 23),
-           (16, "45, Rue Borie", NULL, 'Bordeaux', '33000', NULL, 1, 24),
-           (17, "6, Cours de la Marne", NULL, 'Bordeaux', '33000', NULL, 1, 25),
-           (18, "61, Rue Condorcet", NULL, 'Bordeaux', '33000', NULL, 1, 26),
-           (19, "127, Cours de la Somme", NULL, 'Bordeaux', '33000', NULL, 1, 27);
+           (16, "45, Rue Borie", NULL, 'Bordeaux', '33000', NULL, 1, 26),
+           (17, "6, Cours de la Marne", NULL, 'Bordeaux', '33000', NULL, 1, 28),
+           (18, "61, Rue Condorcet", NULL, 'Bordeaux', '33000', NULL, 1, 29),
+           (19, "127, Cours de la Somme", NULL, 'Bordeaux', '33000', NULL, 1, 30);
 
 -- Some values for the OrderPizza table.
 INSERT INTO OrderPizza (num, buyer_id, pizzeria_id, date_order, time_order, state, delivery_or_not, invoice_address,
@@ -61,13 +67,13 @@ INSERT INTO OrderPizza (num, buyer_id, pizzeria_id, date_order, time_order, stat
            (6, 21, 2, '2018-02-20', '12:10:16', 'Being Prepared', true, 13, 13, 'Cash on delivery', false, NULL),
            (7, 22, 5, '2018-02-20', '12:10:45', 'Being Prepared', true, 14, 14, 'Paid online', true, '6nzAXxV3CRNV2LSV'),
            (8, 23, 3, '2018-02-20', '12:10:47', 'Waiting List', true, 15, 15, 'Paid online', true, '2X68mjRZspRVH33S'),
-           (9, NULL, 1, '2018-02-20', '12:10:57', 'Being Prepared', false, NULL, NULL, 'Credit card pizzeria', true, '2S27QQLEkeYdhcAJ'),
-           (10, NULL, 1, '2018-02-20', '12:11:04', 'Waiting List', false, NULL, NULL, 'Credit card pizzeria', true, 'j2WGMw3x8erRDZNC'),
-           (11, 24, 2, '2018-02-20', '12:11:17', 'Waiting List', true, 16, 16, 'Paid online', true, 'rpPjTCAh8EdfarnG'),
-           (12, NULL, 4, '2018-02-20', '12:11:25', 'Waiting List', false, NULL, NULL, 'Cash pizzeria', true, NULL),
-           (13, 25, 3, '2018-02-20', '12:11:46', 'Waiting List', true, 17, 17, 'Paid online', true, 'mvGMc8k8dfbJDED7'),
-           (14, 26, 1, '2018-02-20', '12:11:56', 'Waiting List', true, 18, 18, 'Cash on delivery', false, NULL),
-           (15, 27, 1, '2018-02-20', '12:11:58', 'Waiting List', true, 19, 19, 'Paid online', true, 'murWnfz5HBufdL4f');
+           (9, 24, 1, '2018-02-20', '12:10:57', 'Being Prepared', false, NULL, NULL, 'Credit card pizzeria', true, '2S27QQLEkeYdhcAJ'),
+           (10, 25, 1, '2018-02-20', '12:11:04', 'Waiting List', false, NULL, NULL, 'Credit card pizzeria', true, 'j2WGMw3x8erRDZNC'),
+           (11, 26, 2, '2018-02-20', '12:11:17', 'Waiting List', true, 16, 16, 'Paid online', true, 'rpPjTCAh8EdfarnG'),
+           (12, 27, 4, '2018-02-20', '12:11:25', 'Waiting List', false, NULL, NULL, 'Cash pizzeria', true, NULL),
+           (13, 28, 3, '2018-02-20', '12:11:46', 'Waiting List', true, 17, 17, 'Paid online', true, 'mvGMc8k8dfbJDED7'),
+           (14, 29, 1, '2018-02-20', '12:11:56', 'Waiting List', true, 18, 18, 'Cash on delivery', false, NULL),
+           (15, 30, 1, '2018-02-20', '12:11:58', 'Waiting List', true, 19, 19, 'Paid online', true, 'murWnfz5HBufdL4f');
 
 -- Some values for the OrderLine table.
 INSERT INTO OrderLine (order_num, pizza_id, quantity)
