@@ -12,10 +12,10 @@ USE oc_pizza;
 -- To create the Buyer table with the columns, primary key and table engine.
 CREATE TABLE Buyer (
     id MEDIUMINT UNSIGNED AUTO_INCREMENT,
-    first_name VARCHAR(100) NOT NULL,
-    last_name VARCHAR(100) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
     gender CHAR(1) NOT NULL,
-    password VARCHAR(50) NOT NULL,
+    password CHAR(16) NOT NULL,
     phone_number CHAR(10) NOT NULL,
     PRIMARY KEY(id))
     ENGINE = INNODB;
@@ -33,7 +33,7 @@ CREATE TABLE OCPizzaUser (
     buyer_id MEDIUMINT UNSIGNED NOT NULL,
     pizzeria_id TINYINT UNSIGNED NOT NULL,
     username VARCHAR(50) NOT NULL,
-    role VARCHAR(50) NOT NULL)
+    role ENUM('General Manager', 'Pizzeria Manager', 'Receptionist', 'Pizzaïolo', 'Delivery Man') NOT NULL)
     ENGINE = INNODB;
 
 -- To create the Address table with the columns and table engine.
@@ -53,7 +53,7 @@ CREATE TABLE Address (
 -- To create the Pizzeria table with the columns, primary key and table engine.
 CREATE TABLE Pizzeria (
     id TINYINT UNSIGNED AUTO_INCREMENT,
-    name VARCHAR(100) UNIQUE NOT NULL,
+    name VARCHAR(50) UNIQUE NOT NULL,
     address_id MEDIUMINT UNSIGNED NOT NULL,
     PRIMARY KEY(id))
     ENGINE = INNODB;
@@ -109,7 +109,7 @@ CREATE TABLE Pizza_Ingredient (
 CREATE TABLE Stock (
     pizzeria_id TINYINT UNSIGNED NOT NULL,
     ingredient_id TINYINT UNSIGNED NOT NULL,
-    quantity_dosis MEDIUMINT UNSIGNED)
+    quantity_dosis SMALLINT UNSIGNED)
     ENGINE = INNODB;
 
 -- To create the Foreign Key in the WebCustomer table.

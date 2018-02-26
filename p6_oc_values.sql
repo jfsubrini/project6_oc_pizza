@@ -16,10 +16,16 @@ INSERT INTO Buyer (id, first_name, last_name, gender, password, phone_number)
 		       (9, 'Geneviève', 'Lemarais', 'F', '5rAfjJX2mppMePkp', 0696432003),
 		       (10, 'Monique', 'Legendre', 'F', 'VxLZGYKWZvYD6QZm', 0664305123),
 		       (11, 'Sonia', 'Bisette', 'F', 'ceMnkWE5bfRU3HYk', 0643511213),
-		       (12, 'André', 'Sainz', 'M', 'aKWY8ZfChvaqmnzS', 0635122879),
-		       (13, 'Fabrice', 'Santori', 'M', 'trBngdMVs7APXvB5', 0651252789),
+		       (12, 'André', 'Sainz', 'H', 'aKWY8ZfChvaqmnzS', 0635122879),
+		       (13, 'Fabrice', 'Santori', 'H', 'trBngdMVs7APXvB5', 0651252789),
 		       (14, 'Monique', 'Soulier', 'F', 'tmN5AR5Pxv69Sh4c', 0625285898),
-		       (15, 'Julie', 'Joubert', 'F', 'FjxvqWYT4mcevqB7', 0658589878);
+		       (15, 'Julie', 'Joubert', 'F', 'FjxvqWYT4mcevqB7', 0656648722),
+           (16, 'Patrick', 'Potier', 'H', 'qvvvhXU32srmad3W', 0665221309),
+           (17, 'Sébastien', 'Jallien', 'H', 'pJ0v16aGblq3j9wk', 0678543445),
+           (18, 'Monique', 'Gilles', 'F', 'kGI6rded6AKklDU2', 0699835623),
+           (19, 'Sylvie', 'Maronnier', 'F', 'Su6hC5S1etJ44w3P', 0699084576),
+           (20, 'Stéphane', 'Janti', 'H', 'aIVCTh2EbWDsoaDm', 0677895435),
+           (21, 'Jérôme', 'Lambert', 'H', 'p4wAYNGD0RqsvBrx', 0667812121);
 
 -- Values for the Address table : the address of each pizzeria.
 INSERT INTO Address (id, street_1, street_2, city, zip_code, comment, type, webcustomer_id)
@@ -39,21 +45,27 @@ INSERT INTO Pizzeria (id, name, address_id)
 
 -- Values for the OCPizzaUser table : other information for all the OC Pizza's employees and managers. 
 INSERT INTO OCPizzaUser (buyer_id, pizzeria_id, username, role)
-    VALUES (1, 1, 'patoche1', 'Réceptionniste'),
-           (2, 1, 'minouche1', 'Réceptionniste'),
-           (3, 1, 'jojo1', 'Manager'),
-           (4, 2, 'ninive2', 'Réceptionniste'),
-           (5, 2, 'gigoule2', 'Réceptionniste'),
-           (6, 2, 'jigoine2', 'Manager'),
-           (7, 3, 'nono3', 'Réceptionniste'),
-           (8, 3, 'bibine3', 'Réceptionniste'),
-           (9, 3, 'ginette3', 'Manager'),
-           (10, 4, 'mounette4', 'Réceptionniste'),
-           (11, 4, 'soubise4', 'Réceptionniste'),
-           (12, 4, 'andre4', 'Manager'),
-           (13, 5, 'fabrice5', 'Réceptionniste'),
-           (14, 5, 'monique5', 'Réceptionniste'),
-           (15, 5, 'jjoubert5', 'Manager');
+    VALUES (1, 1, 'patoche', 'General Manager'),
+           (2, 1, 'minouche', 'Pizzeria Manager'),
+           (3, 1, 'jojo', 'Receptionist'),
+           (4, 1, 'ninive', 'Pizzaïolo'),
+           (5, 1, 'gigoule', 'Delivery Man'),
+           (6, 2, 'jigoine', 'Pizzeria Manager'),
+           (7, 2, 'nono', 'Receptionist'),
+           (8, 2, 'bibine', 'Pizzaïolo'),
+           (9, 2, 'ginette', 'Delivery Man'),
+           (10, 3, 'mounette', 'Pizzeria Manager'),
+           (11, 3, 'soubise', 'Receptionist'),
+           (12, 3, 'andre', 'Pizzaïolo'),
+           (13, 3, 'fabrice', 'Delivery Man'),
+           (14, 4, 'monique', 'Pizzeria Manager'),
+           (15, 4, 'jjoubert', 'Receptionist'),
+           (16, 4, 'patpotier', 'Pizzaïolo'),
+           (17, 4, 'sebjallien', 'Delivery Man'),
+           (18, 5, 'monigilles', 'Pizzeria Manager'),
+           (19, 5, 'sylviemaron', 'Receptionist'),
+           (20, 5, 'stephjanti', 'Pizzaïolo'),
+           (21, 5, 'jlambert', 'Delivery Man');
 
 -- Values for the Pizza table : all the pizzas in the menu, standard (1) and family (2) sizes.
 INSERT INTO Pizza (id, name, size)
