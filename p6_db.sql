@@ -46,6 +46,7 @@ CREATE TABLE Address (
     comment VARCHAR(255),
     type TINYINT NOT NULL,
     webcustomer_id MEDIUMINT UNSIGNED,
+    nearest_pizzeria TINYINT,
     PRIMARY KEY(id))
     ENGINE = INNODB;
 
@@ -119,7 +120,7 @@ ALTER TABLE OCPizzaUser ADD CONSTRAINT fk_buyer2_id
     FOREIGN KEY (buyer_id) REFERENCES Buyer(id);
 ALTER TABLE OCPizzaUser ADD CONSTRAINT fk_pizzeria_id
     FOREIGN KEY (pizzeria_id) REFERENCES Pizzeria(id);
--- To create the Foreign Keys in the Address table.
+-- To create the Foreign Key in the Address table.
 ALTER TABLE Address ADD CONSTRAINT fk_webcustomer_id
     FOREIGN KEY (webcustomer_id) REFERENCES WebCustomer(buyer_id);
 -- To create the Foreign Key in the Pizzeria table.

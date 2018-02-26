@@ -40,21 +40,21 @@ INSERT INTO WebCustomer (buyer_id, email, birthday, job_status)
            (30, 'pablo.hierro@gmail.com', '1981-04-03', 'Employé.e');
 
 -- Some values for the Address table.
-INSERT INTO Address (id, street_1, street_2, city, zip_code, comment, type, webcustomer_id)
-    VALUES (6, "3, Rue des Chartrons", NULL, 'Bordeaux', '33000', "3e étage gauche", 1, 16),
-           (7, "5, Cours de l'Argone", NULL, 'Bordeaux', '33000', NULL, 1, 17),
-           (8, "39, Cours Pasteur", NULL, 'Bordeaux', '33000', NULL, 1, 18),
-           (9, "56, Cours Victor Hugo", NULL, 'Bordeaux', '33000', "5e étage gauche, code porte 5GRSZ", 2, 18),
-           (10, "7, Rue Ravez", NULL, 'Bordeaux', '33000', NULL, 1, 19),
-           (11, "Résidence Le Soleil", '10, Impasse du Tondu', 'Bordeaux', '33000', "Immeuble A, 3e étage gauche", 1, 20),
-           (12, "32, Rue Nicot", NULL, 'Bordeaux', '33000', "2e étage droite", 3, 20),
-           (13, "4, Rue Henri IV", NULL, 'Bordeaux', '33000', NULL, 1, 21),
-           (14, "1, Rue Maubec", NULL, 'Bordeaux', '33000', "5e étage gauche", 1, 22),
-           (15, "11, Rue Boudet", NULL, 'Bordeaux', '33000', NULL, 1, 23),
-           (16, "45, Rue Borie", NULL, 'Bordeaux', '33000', NULL, 1, 26),
-           (17, "6, Cours de la Marne", NULL, 'Bordeaux', '33000', NULL, 1, 28),
-           (18, "61, Rue Condorcet", NULL, 'Bordeaux', '33000', NULL, 1, 29),
-           (19, "127, Cours de la Somme", NULL, 'Bordeaux', '33000', NULL, 1, 30);
+INSERT INTO Address (id, street_1, street_2, city, zip_code, comment, type, webcustomer_id, nearest_pizzeria)
+    VALUES (6, "3, Rue des Chartrons", NULL, 'Bordeaux', '33000', "3e étage gauche", 1, 16, 1),
+           (7, "5, Cours de l'Argone", NULL, 'Bordeaux', '33000', NULL, 1, 17, 1),
+           (8, "39, Cours Pasteur", NULL, 'Bordeaux', '33000', NULL, 1, 18, 5),
+           (9, "56, Cours Victor Hugo", NULL, 'Bordeaux', '33000', "5e étage gauche, code porte 5GRSZ", 2, 18, 3),
+           (10, "7, Rue Ravez", NULL, 'Bordeaux', '33000', NULL, 1, 19, 4),
+           (11, "Résidence Le Soleil", '10, Impasse du Tondu', 'Bordeaux', '33000', "Immeuble A, 3e étage gauche", 1, 20, 3),
+           (12, "32, Rue Nicot", NULL, 'Bordeaux', '33000', "2e étage droite", 3, 20, 3),
+           (13, "4, Rue Henri IV", NULL, 'Bordeaux', '33000', NULL, 1, 21, 2),
+           (14, "1, Rue Maubec", NULL, 'Bordeaux', '33000', "5e étage gauche", 1, 22, 5),
+           (15, "11, Rue Boudet", NULL, 'Bordeaux', '33000', NULL, 1, 23, 3),
+           (16, "45, Rue Borie", NULL, 'Bordeaux', '33000', NULL, 1, 26, 2),
+           (17, "6, Cours de la Marne", NULL, 'Bordeaux', '33000', NULL, 1, 28, 3),
+           (18, "61, Rue Condorcet", NULL, 'Bordeaux', '33000', NULL, 1, 29, 1),
+           (19, "127, Cours de la Somme", NULL, 'Bordeaux', '33000', NULL, 1, 30, 1);
 
 -- Some values for the OrderPizza table.
 INSERT INTO OrderPizza (num, buyer_id, pizzeria_id, date_order, time_order, state, delivery_or_not, invoice_address,
