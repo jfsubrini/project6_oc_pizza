@@ -46,7 +46,7 @@ CREATE TABLE Address (
     comment VARCHAR(255),
     type TINYINT NOT NULL,
     webcustomer_id MEDIUMINT UNSIGNED,
-    nearest_pizzeria TINYINT,
+    nearest_pizzeria TINYINT NOT NULL,
     PRIMARY KEY(id))
     ENGINE = INNODB;
 
