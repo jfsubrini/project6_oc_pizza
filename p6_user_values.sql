@@ -1,6 +1,6 @@
 -- OC PIZZA Database : USER DEMO VALUES - Some examples of data from users.
 
--- Copyright Jean-François Subrini, student DA Python at OpenClassrooms, 22/02/2018.
+-- Copyright Jean-François Subrini, student DA Python at OpenClassrooms, 28/02/2018.
 
 
 -- Some values for the Buyer table.

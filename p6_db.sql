@@ -1,6 +1,6 @@
 -- OC PIZZA Database : DATABASE AND TABLES CREATION
 
--- Copyright Jean-François Subrini, student DA Python at OpenClassrooms, 24/02/2018.
+-- Copyright Jean-François Subrini, student DA Python at OpenClassrooms, 28/02/2018.
 
 
 -- Creating the oc_pizza database after droping the previous one if exists.

@@ -1,6 +1,6 @@
 -- OC PIZZA Database : OC DEMO VALUES - Some data from OC Pizza Managers.
 
--- Copyright Jean-François Subrini, student DA Python at OpenClassrooms, 22/02/2018.
+-- Copyright Jean-François Subrini, student DA Python at OpenClassrooms, 28/02/2018.
 
 
 -- Values for the Buyer table : OC PIZZA employees and managers.
